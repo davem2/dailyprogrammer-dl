@@ -30,7 +30,10 @@ import os
 import html2text
 
 
+__appname__ = "dailyprogrammer-dl"
+__author__  = "David Maranhao"
 __version__="0.1.0" # MAJOR.MINOR.PATCH | http://semver.org
+
 
 def main():
     args = docopt(__doc__, version="dailyprogrammer-dl v{}".format(__version__))

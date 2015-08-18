@@ -1,46 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""progname
-
-Usage:
-  progname [options] <argument>
-  progname -h | --help
-  progname --version
-
-Program description
-
-Examples:
-  progname argument
-
-Options:
-  -q, --quiet           Print less text.
-  -v, --verbose         Print more text.
-  -h, --help            Show help.
-  --version             Show version.
-"""
-
-from docopt import docopt
-
-
-VERSION="0.1.0" # MAJOR.MINOR.PATCH | http://semver.org
-
 def main():
-    args = docopt(__doc__, version="progname v{}".format(VERSION))
-
-    # Configure logging
-    logLevel = logging.INFO #default
-    if args['--verbose']:
-        logLevel = logging.DEBUG
-    elif args['--quiet']:
-        logLevel = logging.ERROR
-
-    logging.basicConfig(format='%(levelname)s: %(message)s', level=logLevel)
-    logging.debug(args)
-
-    # Process command line arguments
-    challengeURL = args['<argument>']
-
 
 
 if __name__ == "__main__":
