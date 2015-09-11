@@ -22,6 +22,7 @@ Options:
 """
 
 from docopt import docopt
+#TODO.. could use something more lightweight (requests/bs4) instead of robobrowser as login is no longer required?
 from robobrowser import RoboBrowser
 import logging
 import re
