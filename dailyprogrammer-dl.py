@@ -96,7 +96,8 @@ def generateProjectName( s ):
     m = re.search("Challenge #(\d+) \[(\w+)\] (.+)",s)
     if m:
         name = "{}{}-{}".format(m.group(1),m.group(2)[0].upper(),m.group(3).lower())
-        name = re.sub(" ","-",name)
+        name = re.sub("\s","-",name)        # convert whitespace to dashes
+        name = re.sub("[^\w\s-]","",name)   # strip punctuation
     else:
         name = s
 
