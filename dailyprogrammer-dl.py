@@ -55,7 +55,7 @@ def main():
 
     # Parse project page for title and description
     logging.info("Parsing daily challenge: {}".format(challengeURL))
-    browser = RoboBrowser()
+    browser = RoboBrowser(history=True, parser='html.parser')
     browser.session.headers['User-Agent'] = "dailyprogrammer-dl v{} by /u/zod77".format(__version__)
     browser.open(challengeURL)
     title = browser.find('a',class_='title').string
